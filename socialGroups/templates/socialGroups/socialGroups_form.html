@@ -1,0 +1,12 @@
+{% extends 'socialGroups/socialGroups_base.html' %}
+{% load bootstrap3 %}
+{% load static %}
+
+{% block group_content %}
+<h4 class="create-form-left-side">Create new group!</h4>
+    <form action="{% url 'social_groups:create_group' %}" method="POST" id="groupForm">
+    {% csrf_token %}
+    {% bootstrap_form form %}
+    <input type="submit" class="btn btn-primary btn-large" value="Create Group!">
+    </form>
+{% endblock %}

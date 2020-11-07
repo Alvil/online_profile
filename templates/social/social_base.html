@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js" integrity="sha384-LtrjvnR4Twt/qOuYxE721u19sVFLVSA4hf/rRt6PrZTmiPltdZcI7q7PXQBYTKyf" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet"  href="{% static 'css/social.css' %}">
+    <link rel="stylesheet" href="{% static 'css/master.css' %}">
+    {% block social_head_block %}
+
+    {% endblock %}
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-secondary mynav" role="navigation" id="navbar">
+        <div class="container">
+            <a class="navbar-brand d-none d-lg-inline-block mynav" href="{% url 'SocialHomePage' %}">Home</a>
+
+            <ul class="navbar-nav text-right">
+                {% if user.is_authenticated %}
+                    <li><a class="nav-item m-2 nav-list" href="{% url 'social_posts:create_post' %}" >Post!</a></li>
+                    <li><a class="nav-item m-2" href="{% url 'social_groups:all_group' %}">Groups</a></li>
+                    <li><a class="nav-item m-2" href="{% url 'social_groups:create_group' %}">Create Group</a></li>
+                    <li><a class="nav-item m-2" href="{% url 'social_accounts:logout' %}">Log out</a></li>
+                {% else %}
+                    <li><a class="nav-item m-2" href="{% url 'social_groups:all_group' %}">Groups</a></li>
+                    <li><a class="nav-item m-2" href="{% url 'social_accounts:login' %}">Log in</a></li>
+                    <li><a class="nav-item m-2" href="{% url 'social_accounts:signup' %}">Sign up</a></li>
+                {% endif %}
+
+
+            </ul>
+        </div>
+    </nav>
+    <br>
+    {% block social_body %}
+
+    {% endblock %}
+
+</body>
+<canvas id="canvas"></canvas>
+<script type="text/javascript" src="{% static 'js/social.js' %}"></script>
+</html>

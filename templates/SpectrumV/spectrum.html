@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SV</title>
+    <link rel="stylesheet" type="text/css" href="spectrum.css">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js" integrity="sha384-LtrjvnR4Twt/qOuYxE721u19sVFLVSA4hf/rRt6PrZTmiPltdZcI7q7PXQBYTKyf" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+
+        <div class="jumbotron">
+            <h1>Create your art, inspired by Spectrum V by Ellsworth Kelly</h1>
+        </div>
+
+        <div style="text-align: center;">
+
+                <table id="art" style="width:75%;">
+                    <tr style="height: 400px;">
+                        <td class="palette" id="one"></td>
+                        <td class="palette" id="two"></td>
+                        <td class="palette" id="three"></td>
+                        <td class="palette" id="four"></td>
+                        <td class="palette" id="five"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label><br>
+                                <input class="inputColor" type="text" id="valone" placeholder="#CAD2C5">
+                            </label>
+                        </td>
+                        <td>
+                            <label><br>
+                                <input class="inputColor" type="text" id="valtwo" placeholder="#84A98C">
+                            </label>
+                        </td>
+                        <td>
+                            <label><br>
+                                <input class="inputColor" type="text" id="valthree" placeholder="#52796F">
+                            </label>
+                        </td>
+                        <td>
+                            <label><br>
+                                <input class="inputColor" type="text" id="valfour" placeholder="#354F52">
+                            </label>
+                        </td>
+                        <td>
+                            <label><br>
+                                <input class="inputColor" type="text" id="valfive" placeholder="#2F3E46">
+                            </label>
+                        </td>
+                    </tr>
+                </table>
+
+            <br>
+            <p>Enter valid hex (with #) to change the color </p>
+            <p>(note: refreshing the page will reset the palettes)</p>
+
+            <form>
+                <input type="button" class="btn btn-outline-primary" value="Change Color" onclick="colorChange()">
+            </form>
+        </div>
+    </div>
+    <script src="spectrum.js"></script>
+</body>
+</html>

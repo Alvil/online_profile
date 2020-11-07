@@ -1,0 +1,48 @@
+{% extends 'socialGroups/socialGroups_base.html' %}
+{% load static %}
+
+{% block pregroup %}
+    <table>
+
+        <tr>
+            <td>
+                <h1 class="group-name">{{ socialgroup.name }}</h1>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h3>Member count: {{ socialgroup.members.count }}</h3>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="content">
+                    {% if user in socialgroup.members.all %}
+                        <a href="{% url 'social_groups:leave' slug=socialgroup.slug %}" class='btn  btn-fill btn-warning'>
+                        <span class="glyphicon glyphicon-remove-circle"></span>Leave
+                        </a>
+
+                    {% else %}
+                        <a href="{% url 'social_groups:join' slug=socialgroup.slug %}" class='btn btn-fill btn-warning'>
+                        <span class="glyphicon glyphicon-ok-circle"></span>Join
+                        </a>
+                    {% endif %}
+
+                </div>
+            </td>
+        </tr>
+
+    </table>
+{% endblock %}
+
+{% block group_content %}
+    <div class="col-md-8">
+        {% if socialgroup.group_posts.count == 0  %}
+            <h2>No posts in this group yet</h2>
+        {% else %}
+            {% for socialpost in socialgroup.group_posts.all %}
+                {% include 'socialPosts/_post.html' %}
+            {% endfor %}
+        {% endif %}
+    </div>
+{% endblock %}

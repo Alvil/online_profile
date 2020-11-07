@@ -1,0 +1,34 @@
+body{
+    padding-bottom: 50px;
+}
+
+.jumbotron h1{
+    color: purple;
+    font-family: 'Indie Flower', cursive;
+    text-align: center;
+}
+
+table, td{
+    border: 10px solid white;
+    margin: auto;
+}
+
+#one{
+    background-color: #CAD2C5;
+}
+
+#two{
+    background-color: #84A98C;
+}
+
+#three{
+    background-color: #52796F;
+}
+
+#four{
+    background-color: #354F52;
+}
+
+#five{
+    background-color: #2F3E46;
+}
