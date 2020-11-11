@@ -1,2 +1,49 @@
+body{
+    background-image:
+        url("https://c.pxhere.com/photos/7e/e2/star_milky_way_background_night_starry_sky_night_sky_space_texture-674008.jpg!d");
+    padding-top: 50px;
+}
 
+.my-info-table{
+    width: 100%;
+}
 
+.info-td{
+    width: 70%;
+}
+
+.my-info-div{
+    background-color: transparent;
+    color: #87bf43;
+    font-family: 'Architects Daughter', cursive;
+
+}
+
+span{
+    font-family: 'Indie Flower', cursive;
+}
+
+.picture-wrapper img{
+    width: 150px;
+}
+
+.my-links img{
+    height: 30px;
+    background-color: transparent;
+}
+
+.my-links{
+    width: 50%;
+}
+
+#myprojects .jumbotron{
+    background-color: #5ad1d1;
+}
+
+#myprojects .jumbotron .project-link{
+
+    text-align: right;
+    margin-right: 15%;
+    display: block;
+    /*margin-left: auto;*/
+}

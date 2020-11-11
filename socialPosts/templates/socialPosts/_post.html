@@ -3,7 +3,7 @@
         <tr>
             <td>
 
-                <a href="{% url 'social_posts:single_post' username=user.username pk=socialpost.pk %}">
+                <a href="{% url 'social_posts:single_post' username=socialpost.user.username pk=socialpost.pk %}">
                     <h3>{{ socialpost.message|safe }}</h3>
                 </a>
             </td>

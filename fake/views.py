@@ -5,8 +5,8 @@ from . import models
 # Create your views here.
 
 
-def index(request):
-    return render(request, 'index.html')
+def home(request):
+    return render(request, 'fake/home.html')
 
 
 class UserList(generic.ListView):
@@ -22,6 +22,6 @@ def create_user(request):
 
         if form.is_valid():
             form.save(commit=True)
-            return index(request)
+            return home(request)
 
-    return render(request, 'createUser.html', {'form': form})
+    return render(request, 'fake/createUser.html', {'form': form})

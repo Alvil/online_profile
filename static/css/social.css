@@ -1,7 +1,3 @@
-.nav-item{
-    color: #d5eb67
-}
-
 .create-form-left-side{
     padding-right: 50px;
     padding-left: 50px;
@@ -13,10 +9,18 @@ canvas {
     left:0;
     width:100%;
     height:100%;
-    background: lightslategrey;
+    background: rgb(108, 117, 125);
     z-index: -1;
 }
 
-/*body{*/
-/*    z-index: 1;*/
-/*}*/
+nav .navbar-nav li a{
+  color: #d5eb67 !important;
+  }
+
+a{
+    color: white;
+}
+
+h2{
+    color: #b9ffff;
+}

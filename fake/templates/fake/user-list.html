@@ -1,14 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-    {% for usercredentials in usercredentials_list %}
-        <p>{{ usercredentials.first_name }}</p>
-        <p>1</p>
-    {% endfor %}
+{% extends 'fake-base.html' %}
+{% load static %}
 
-</body>
-</html>
+{% block fake-body %}
+    <div class="jumbotron">
+        <h2>Hello~~</h2>
+        <p class="lead">You can view the registered users here</p>
+    </div>
+    <ol>
+        {% for usercredentials in usercredentials_list %}
+            <br>
+            <li>
+                <ul>
+                    <li>First name: {{ usercredentials.first_name }}</li>
+                    <li>Last name: {{ usercredentials.last_name }}</li>
+                    <li>Email: {{ usercredentials.email }}</li>
+                </ul>
+            </li>
+        {% endfor %}
+    </ol>
+{% endblock %}

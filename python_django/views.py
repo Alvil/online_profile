@@ -3,7 +3,7 @@ from django.views.generic import TemplateView
 
 
 def index(request):
-    return render(request, 'base.html')
+    return render(request, 'landing-page.html')
 
 
 class SocialHomePage(TemplateView):
