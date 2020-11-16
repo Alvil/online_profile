@@ -11,15 +11,18 @@ User = get_user_model()
 class SocialPost(models.Model):
     user = models.ForeignKey(User, related_name='user_posts', on_delete=models.DO_NOTHING)
     created_at = models.DateTimeField(auto_now=True)
+    title = models.CharField(max_length=256, default='---')
+    title_html = models.CharField(max_length=256, editable=False, default='---')
     message = models.TextField()
     message_html = models.TextField(editable=False)
     groups = models.ForeignKey(SocialGroup, related_name='group_posts', null=True, blank=True, on_delete=models.CASCADE)
 
     def __str__(self):
-        return self.message
+        return self.title
 
     def save(self, *args, **kwargs):
         self.message_html = misaka.html(self.message)
+        self.title_html = misaka.html(self.title)
         super(SocialPost, self).save(*args, **kwargs)
 
     def get_absolute_url(self):

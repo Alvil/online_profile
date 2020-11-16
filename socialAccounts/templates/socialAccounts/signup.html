@@ -4,10 +4,11 @@
     <div class="container">
     <h1>Sign-up</h1>
 
-    <form method="POST">
+    <form method="POST" class="">
         {% csrf_token %}
         {% bootstrap_form form %}
-        <input type="submit" class="btn" value="Sign-up!">
+        <input type="submit" class="btn-block" value="Sign-up!">
     </form>
     </div>
+    <br>
 {% endblock %}

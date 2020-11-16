@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'socialAccounts',
     'socialGroups',
     'socialPosts',
-
+    'socialComments',
 ]
 
 MIDDLEWARE = [

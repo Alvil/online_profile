@@ -3,8 +3,23 @@
 
 {% block post_content %}
     <div class="col-md-8">
-{#        {% for post in socialposts %}#}
         {% include 'socialPosts/_post.html' %}
-{#        {% endfor %}#}
+
+        {% if user.is_authenticated %}
+            <a href="{% url 'social_posts:social_comments:create_comment' username=socialpost.user.username pk=socialpost.pk %}">
+                <span class="btn bg-primary">Comment!</span>
+            </a>
+        {% endif %}
+
+        {% if socialpost.post_comments.count == 0 %}
+            <p>There are no comments on this post</p>
+        {% else %}
+            {% for socialcomment in socialpost.post_comments.all %}
+                {% include 'socialComments/_comment.html' %}
+            {% endfor %}
+        {% endif %}
+
+
+
     </div>
 {% endblock %}

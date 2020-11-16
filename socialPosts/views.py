@@ -29,8 +29,6 @@ class UserPosts(generic.ListView):
         except User.DoesNotExist:
             raise Http404
         else:
-            # print('test')
-            # print(self.post_user.user_posts.all())
             return self.post_user.user_posts.all()
 
     def get_context_data(self, *, object_list=None, **kwargs):
@@ -50,9 +48,10 @@ class PostDetail(SelectRelatedMixin, generic.DetailView):
 
 
 class CreatePost(LoginRequiredMixin, SelectRelatedMixin, generic.CreateView):
-    fields = ('message', 'groups')
-    template_name = 'socialPosts/socialPosts_form.html'
     model = models.SocialPost
+    fields = ('title', 'message', 'groups')
+    template_name = 'socialPosts/socialPosts_form.html'
+
 
     def form_valid(self, form):
         self.object = form.save(commit=False)
@@ -64,7 +63,7 @@ class CreatePost(LoginRequiredMixin, SelectRelatedMixin, generic.CreateView):
 class DeletePost(LoginRequiredMixin, SelectRelatedMixin, generic.DeleteView):
     model = models.SocialPost
     select_related = ('user', 'groups')
-    success_url = reverse_lazy('social_posts:all_post')
+    success_url = reverse_lazy('social_groups:single_group')
     template_name = 'socialPosts/socialPosts_confirm_delete.html'
 
     def get_queryset(self):

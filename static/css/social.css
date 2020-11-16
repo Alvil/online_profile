@@ -24,3 +24,11 @@ a{
 h2{
     color: #b9ffff;
 }
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  margin: 0;
+}

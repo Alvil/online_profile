@@ -1,4 +1,4 @@
-from django.urls import path, re_path
+from django.urls import path, re_path, include
 from . import views
 
 app_name = 'social_posts'
@@ -9,4 +9,6 @@ urlpatterns = [
     path('by/<username>/', views.UserPosts.as_view(), name='for_user'),
     path('by/<username>/<pk>/', views.PostDetail.as_view(), name='single_post'),
     path('delete/<pk>/', views.DeletePost.as_view(), name='delete_post'),
+    path('by/<username>/<pk>/comments/', include('socialComments.urls', namespace='social_comments'),
+         name='comment_section'),
 ]
