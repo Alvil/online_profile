@@ -76,33 +76,36 @@
         </table>
     </div>
     <div class="project-list container">
-        <h1>My projects</h1>
         <div class="carousel slide" id="myprojects" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <div class="jumbotron container">
-                        <h2>Social Clone Project</h2>
+                        <h2>Social Website</h2>
                         <hr class="my-4">
-                        <p class="lead">This is a simple social website clone where users can register, create groups,
+                        <p class="lead">This is a social website where users can register, create groups,
                         create posts and comment.</p>
                         <a class='project-link' href="{% url 'SocialHomePage' %}">Click here to visit the website</a>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <div class="jumbotron container">
-                        <h2>Simple Project</h2>
+                        <h2>Catalogue</h2>
                         <hr class="my-4">
-                        <p class="lead">A simple website where visitors can create and view simple users.</p>
+                        <p class="lead">A website where visitors can create and view entries.</p>
                         <a class='project-link' href="{% url 'fake:home' %}">Click here to visit the website</a>
                     </div>
                 </div>
             </div>
-            <a class="carousel-control-prev" href="#myprojects" role="button" data-slide="prev">
+            <a class="carousel-control-prev resize-carousel-button" href="#myprojects" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             </a>
-            <a class="carousel-control-next" href="#myprojects" role="button" data-slide="next">
+            <a class="carousel-control-next resize-carousel-button" href="#myprojects" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                 <span class="sr-only">Next</span>
             </a>
         </div>
     </div>
+    <div id="root"></div>
 </body>
 <script type="text/javascript" src="{% static 'js/landing-page.js' %}"></script>
 </html>

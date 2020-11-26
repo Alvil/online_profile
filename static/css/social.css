@@ -1,6 +1,10 @@
-.create-form-left-side{
-    padding-right: 50px;
-    padding-left: 50px;
+html,
+body {
+    overflow: auto;
+    background: rgb(108, 117, 125);
+    margin: 0;
+    padding-top: 30px;
+    color: white;
 }
 
 canvas {
@@ -9,26 +13,25 @@ canvas {
     left:0;
     width:100%;
     height:100%;
-    background: rgb(108, 117, 125);
     z-index: -1;
 }
 
-nav .navbar-nav li a{
-  color: #d5eb67 !important;
+nav .navbar-nav li a {
+    color: #d5eb67 !important;
   }
 
-a{
+a {
     color: white;
 }
 
-h2{
+h2 {
     color: #b9ffff;
 }
 
-html,
-body {
-  height: 100%;
-  width: 100%;
-  overflow: auto;
-  margin: 0;
+.ttt-game-description {
+    color: aquamarine;
+}
+.create-form-left-side {
+    padding-right: 50px;
+    padding-left: 50px;
 }

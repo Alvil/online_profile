@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'webpack_loader',
     'bootstrap3',
     'fake',
     'socialAccounts',
@@ -128,3 +129,10 @@ STATICFILES_DIRS = [
 
 LOGIN_REDIRECT_URL = '/social/'
 LOGOUT_REDIRECT_URL = '/social/'
+
+WEBPACK_LOADER = {
+    'DEFAULT': {
+        'BUNDLE_DIR_NAME': 'dist/',
+        'STATS_FILE': BASE_DIR / 'webpack-stats.json',
+    }
+}
