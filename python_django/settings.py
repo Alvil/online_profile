@@ -24,8 +24,6 @@ BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-SECRET_KEY = '(mu$=5tu2j3xlct_@)&5-v5(-pocprn0hk28r5*e52r-c@#$st'
-
 ALLOWED_HOSTS = []
 
 # Application definition
