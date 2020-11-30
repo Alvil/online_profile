@@ -20,10 +20,11 @@ BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '(mu$=5tu2j3xlct_@)&5-v5(-pocprn0hk28r5*e52r-c@#$st'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+
+SECRET_KEY = '(mu$=5tu2j3xlct_@)&5-v5(-pocprn0hk28r5*e52r-c@#$st'
 
 ALLOWED_HOSTS = []
 
@@ -36,13 +37,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'webpack_loader',
     'bootstrap3',
-    'fake',
-    'socialAccounts',
-    'socialGroups',
-    'socialPosts',
-    'socialComments',
+    'social_app.Accounts',
+    'social_app.Groups',
+    'social_app.Posts',
+    'social_app.Comments',
+    'wish_app',
 ]
 
 MIDDLEWARE = [
@@ -129,10 +129,3 @@ STATICFILES_DIRS = [
 
 LOGIN_REDIRECT_URL = '/social/'
 LOGOUT_REDIRECT_URL = '/social/'
-
-WEBPACK_LOADER = {
-    'DEFAULT': {
-        'BUNDLE_DIR_NAME': 'dist/',
-        'STATS_FILE': BASE_DIR / 'webpack-stats.json',
-    }
-}

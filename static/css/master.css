@@ -5,27 +5,35 @@ body {
     padding-top: 50px;
 }
 
-.my-info-table {
-    width: 100%;
-}
-
-.info-td {
+.about-div {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
     width: 70%;
+
 }
 
-.my-info-div {
-    background-color: transparent;
-    color: #87bf43;
+.info-div {
+    background-color: blanchedalmond;
+    float: right;
+    flex-grow: 1;
     font-family: 'Architects Daughter', cursive;
+}
 
+.picture-div {
+    flex-grow: 1;
+    margin-top: 30px;
+    margin-right: 10px;
+}
+
+#picture{
+    border: 5px solid yellowgreen;
+    border-radius: 50%;
+    overflow: hidden;
 }
 
 span {
     font-family: 'Indie Flower', cursive;
-}
-
-.picture-wrapper img {
-    width: 150px;
 }
 
 .my-links img {
@@ -37,8 +45,14 @@ span {
     width: 50%;
 }
 
+.project-list {
+    width: 60%;
+
+}
+
 #myprojects .jumbotron {
     background-color: #5ad1d1;
+    height: 300px;
 }
 
 #myprojects .jumbotron .project-link {
@@ -49,5 +63,5 @@ span {
 }
 
 .resize-carousel-button {
-    width: 40px;
+    width: 30px;
 }

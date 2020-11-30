@@ -1,0 +1,12 @@
+{% extends 'social/social_base.html'%}
+{% block social_body %}
+
+  <div class="container">
+    <div class="row">
+      {% block pregroup %}{% endblock %}
+      {% block group_content %}{% endblock %}
+      {% block postgroup %}{% endblock %}
+    </div>
+  </div>
+
+{% endblock %}

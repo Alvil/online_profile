@@ -1,14 +1,15 @@
 html,
 body {
     overflow: auto;
-    background: rgb(108, 117, 125);
     margin: 0;
     padding-top: 30px;
     color: white;
 }
 
+
 canvas {
     position:absolute;
+    background: rgb(108, 117, 125);
     top:0;
     left:0;
     width:100%;
@@ -16,8 +17,12 @@ canvas {
     z-index: -1;
 }
 
+.navbar {
+    background-color: black;
+}
+
 nav .navbar-nav li a {
-    color: #d5eb67 !important;
+    color: #d5eb67;
   }
 
 a {

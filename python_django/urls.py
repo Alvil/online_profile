@@ -19,10 +19,10 @@ from . import views
 
 urlpatterns = [
     path('', views.index, name='landing_page'),
-    path('faker/', include('fake.urls')),
     path('social/', views.SocialHomePage.as_view(), name='SocialHomePage'),
-    path('social/accounts/', include('socialAccounts.urls')),
-    path('social/groups/', include('socialGroups.urls')),
-    path('social/posts/', include('socialPosts.urls')),
+    path('social/accounts/', include('social_app.Accounts.urls')),
+    path('social/groups/', include('social_app.Groups.urls')),
+    path('social/posts/', include('social_app.Posts.urls')),
+    path('wish/', include('wish_app.urls')),
     path('admin/', admin.site.urls),
 ]

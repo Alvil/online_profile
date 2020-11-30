@@ -1,0 +1,13 @@
+{% extends 'wish_base.html' %}
+{% load bootstrap3 %}
+
+{% block bodyblock %}
+  <div class="container">
+    <form action="{% url 'wish:create_wish' %}" method="post">
+      {% csrf_token %}
+      {% bootstrap_form form %}
+      <input type="submit" value="submit">
+    </form>
+  </div>
+
+{% endblock %}

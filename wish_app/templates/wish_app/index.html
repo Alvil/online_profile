@@ -1,0 +1,12 @@
+{% extends 'wish_base.html' %}
+
+{% block bodyblock %}
+  <div class="container">
+    {% for wish in wish_list %}
+      <ul class="piece-of-wish">
+        <li>Wish: {{ wish.wish }}</li>
+        <li>Times this was wished: {{ wish.instances }}</li>
+      </ul>
+    {% endfor %}
+  </div>
+{% endblock %}
