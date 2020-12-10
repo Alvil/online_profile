@@ -4,7 +4,7 @@
 
 {% block post_content %}
   <h4 class="create-form-left-side">Create new post!</h4>
-  <form action="{% url 'social_posts:create_post' %}" method="post">
+  <form action="{% url 'social_posts:create_post' %}" method="post" class="clickable">
     {% csrf_token %}
     {% bootstrap_form form %}
     <input type="submit" value="Post!" class="btn btn-primary">

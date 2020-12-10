@@ -6,7 +6,8 @@
     {% include 'socialPosts/_post.html' %}
 
     {% if user.is_authenticated %}
-      <a href="{% url 'social_posts:social_comments:create_comment' username=socialpost.user.username pk=socialpost.pk %}">
+      <a href="{% url 'social_posts:social_comments:create_comment' username=socialpost.user.username pk=socialpost.pk %}"
+        class="clickable">
         <span class="btn bg-primary">Comment!</span>
       </a>
     {% endif %}

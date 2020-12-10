@@ -5,7 +5,7 @@ from .views import (SocialPostList, CreatePost, UserPosts,
 app_name = 'social_posts'
 
 urlpatterns = [
-    path('', SocialPostList.as_view(), name='all_post'),
+    # path('', SocialPostList.as_view(), name='all_post'),
     path('create/', CreatePost.as_view(), name='create_post'),
     path('by/<username>/', UserPosts.as_view(), name='for_user'),
     path('<pk>/by/<username>/', PostDetail.as_view(), name='single_post'),

@@ -6,7 +6,7 @@
 
     <tr>
       <td>
-        <h1 class="group-name">{{ socialgroup.name }}</h1>
+        <h1 class="group-name clickable">{{ socialgroup.name }}</h1>
       </td>
     </tr>
     <tr>
@@ -16,7 +16,7 @@
     </tr>
     <tr>
       <td>
-        <div class="content">
+        <div class="content clickable">
           {% if user in socialgroup.members.all %}
             <a href="{% url 'social_groups:leave' slug=socialgroup.slug %}" class='btn  btn-fill btn-warning'>
               <span class="glyphicon glyphicon-remove-circle"></span>Leave
@@ -37,6 +37,7 @@
 
 {% block group_content %}
   <div class="col-md-8">
+    <h2 class="clickable" style="width: fit-content;">{{ socialgroup.description }}</h2>
     {% if socialgroup.group_posts.count == 0  %}
       <h2>No posts in this group yet</h2>
     {% else %}

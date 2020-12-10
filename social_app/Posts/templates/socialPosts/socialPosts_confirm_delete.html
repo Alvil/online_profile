@@ -6,8 +6,8 @@
 
   <form method="post">
     {% csrf_token %}
-    <input type="submit" value="Confirm Delete" class="btn btn-danger">
+    <input type="submit" value="Confirm Delete" class="btn btn-danger clickable">
     <a href="{% url 'social_posts:single_post' username=user.username pk=object.pk %}"
-       class="btn btn-simple">Cancel</a>
+       class="btn btn-simple clickable">Cancel</a>
   </form>
 {% endblock %}

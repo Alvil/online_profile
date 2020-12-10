@@ -3,13 +3,12 @@
 
 
 {% block social_body %}
-  <div class="container">
-  <h1>Log-in</h1>
-
-  <form method="POST">
-    {% csrf_token %}
-    {% bootstrap_form form %}
-    <input type="submit" class="btn" value="Log-in!">
-  </form>
+  <div class="container login">
+    <h1>Log-in</h1>
+    <form method="POST" class="clickable">
+      {% csrf_token %}
+      {% bootstrap_form form %}
+        <input type="submit" class="btn-block btn-lg btn-light login-button" value="Log-in!">
+    </form>
   </div>
 {% endblock %}

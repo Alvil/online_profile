@@ -4,7 +4,7 @@
       <tr>
         <td>
           <span class="username">
-          <a href="{% url 'social_posts:for_user' username=socialcomment.user.username %}">
+          <a href="{% url 'social_posts:for_user' username=socialcomment.user.username %}" class="clickable">
             @{{ socialcomment.user.username }}</a>
           </span>
         </td>
@@ -15,12 +15,6 @@
           </td>
       </tr>
       <tr>
-{#        {% if user.is_authenticated and user == socialcomment.user %}#}
-{#          <a href="{% url 'social_posts:social_comments:delete_comment' username=socialcomment.user.username pk=socialcomment.at_post.pk comment_pk=socialcomment.pk %}"#}
-{#             title="delete" class="btn-outline-primary">#}
-{#            <span class="text-danger" aria-hidden="true">Delete</span>#}
-{#          </a>#}
-{#        {% endif %}#}
       </tr>
     </table>
 </div>

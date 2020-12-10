@@ -1,8 +1,14 @@
-body {
-    background-image:
+html {
+    background:
         url("https://c.pxhere.com/photos/7e/e2/star_milky_way_background_night_starry_sky_night_sky_space_texture-674008.jpg!d");
-    /*background-color: #6032a8;*/
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+body {
     padding-top: 50px;
+    background: rgba(0, 0, 0, 0);
 }
 
 .about-div {

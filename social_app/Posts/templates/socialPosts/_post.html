@@ -1,7 +1,7 @@
 <div class="post media">
   <table>
     <tr>
-      <td>
+      <td class="clickable" style="width: fit-content">
         <a href="{% url 'social_posts:single_post' username=socialpost.user.username pk=socialpost.pk %}">
           <h3>{{ socialpost.title|safe }}</h3>
           <h4>{{ socialpost.message|safe }}</h4>
@@ -13,7 +13,7 @@
       <td>
         <div class="media-body">
           <h5 class="media-heading">
-          <span class="username">
+          <span class="username clickable">
             <a href="{% url 'social_posts:for_user' username=socialpost.user.username %}">
               @{{ socialpost.user.username }}</a>
           </span>
@@ -22,11 +22,14 @@
           </time>
           </h5>
 
-          <div class="media-footer">
+          <div class="media-footer clickable">
             {% if user.is_authenticated and socialpost.user == user %}
-              <a href="{% url 'social_posts:delete_post' pk=socialpost.pk %}" id="delete" class="btn btn-simple">
-                <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+              <a href="{% url 'social_posts:delete_post' pk=socialpost.pk %}" id="delete"class="btn btn-simple">
+                <span class="glyphicon glyphicon-trash"></span>
                 <span class="text-danger icon-label">Delete</span>
+              <svg class="bi" width="32" height="32" fill="currentColor">
+                <use xlink:href="bootstrap-icons.svg#heart-fill"></use>
+              </svg>
               </a>
             {% endif %}
           </div>

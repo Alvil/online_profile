@@ -30,7 +30,6 @@ function colorChange(){
     }
 
     if (valid === true) {
-        // console.log('wat')
         for (let k = 0; k < 5; k++) {
             document.getElementById(inputColorIDs[k]).placeholder = document.getElementById(inputColorIDs[k]).value;
             document.getElementById(inputColorIDs[k]).value = '';
